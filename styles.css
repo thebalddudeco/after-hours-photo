@@ -171,12 +171,12 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
 }
 .motion-heading {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: 0;
   align-items: end;
 }
 .motion-heading h2 { font-size: clamp(4rem, 8.5vw, 9rem); }
-.motion-heading > p { max-width: 28rem; margin: 0 0 .6rem auto; color: #c4c0b9; font-size: 1.15rem; }
+.motion-heading > p { max-width: 28rem; margin: 2rem 0 0; color: #c4c0b9; font-size: 1.15rem; }
 .motion-player { margin: 5rem 0 0; }
 .motion-player video {
   width: 100%;
