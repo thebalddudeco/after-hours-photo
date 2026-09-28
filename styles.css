@@ -188,7 +188,7 @@ footer p:last-child { text-align: right; }
   .site-header { padding: 1rem; }
   nav a:not(.nav-contact) { display: none; }
   .hero-copy { left: 1rem; bottom: 13vh; width: calc(100vw - 2rem); }
-  .hero h1 { font-size: clamp(3.9rem, 18vw, 6rem); }
+  .hero h1 { font-size: clamp(3.35rem, 15.5vw, 5rem); }
   .hero-note { max-width: 19rem; }
   .scroll-cue { right: 1rem; bottom: 1.2rem; }
   .intro, .services { grid-template-columns: 1fr; padding: 7rem 1rem; }
