@@ -126,6 +126,9 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .work-heading h2 { font-size: clamp(4rem, 8.5vw, 9rem); }
 .work-heading h2 em { display: block; padding-top: .08em; line-height: .92; }
 .work-heading > p { max-width: 28rem; margin: 0 0 .6rem auto; font-size: 1.15rem; }
+.work-heading > p,
+.motion-heading > p { text-wrap: pretty; }
+.nowrap { white-space: nowrap; }
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
