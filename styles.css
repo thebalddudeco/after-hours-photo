@@ -152,6 +152,8 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 }
 .gallery-private img {
   aspect-ratio: 8 / 9;
+  object-fit: cover;
+  object-position: center center;
 }
 .gallery .gallery-video {
   grid-column: span 2;
