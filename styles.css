@@ -198,6 +198,7 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
   background: #000;
 }
 .motion-player figcaption { color: #aaa; }
+.motion .gallery { margin-top: 5rem; }
 
 .private { padding-top: 7rem; }
 .services { grid-template-columns: 1fr 1.2fr 1.8fr; align-items: start; background: var(--paper-deep); }
@@ -315,6 +316,7 @@ footer p:last-child { text-align: right; }
   .motion-player { margin-top: 3rem; }
   .motion-films { grid-template-columns: 1fr; gap: 3rem; margin-top: 3rem; }
   .motion-films .motion-player { margin-top: 0; }
+  .motion .gallery { margin-top: 3rem; }
   .motion-player video { aspect-ratio: 4 / 5; }
   .services h2 { font-size: 4rem; }
   .contact { padding: 7rem 1rem; }
