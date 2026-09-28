@@ -14,5 +14,5 @@ Then open `http://localhost:4173`.
 
 ## Publishing
 
-The site is configured for GitHub Pages and includes a `CNAME` for `www.afterhoursphoto.com`. DNS must be pointed to GitHub before the custom domain and HTTPS can finish activating.
+The site is configured for GitHub Pages. The intended custom domain is `www.afterhoursphoto.com`, but its DNS currently points to Squarespace. Add the `CNAME` file only after the DNS is switched so the GitHub Pages preview remains available in the meantime.
 
