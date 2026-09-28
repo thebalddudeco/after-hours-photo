@@ -150,7 +150,7 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
   object-fit: cover;
   background: var(--paper-deep);
 }
-.gallery-private .sony-still img {
+.gallery-private img {
   aspect-ratio: 3 / 2;
 }
 .gallery .gallery-video {
