@@ -116,6 +116,7 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .intro div > p { max-width: 58rem; margin: 3rem 0 0; font-size: clamp(1.2rem, 2.1vw, 1.8rem); }
 
 .work { padding: 10rem 3.5vw 5rem; }
+.osf, .private { color: #fff; background: #000; }
 .work-heading {
   display: grid;
   grid-template-columns: 2fr 1fr;
