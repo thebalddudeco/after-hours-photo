@@ -146,7 +146,7 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 }
 .gallery .gallery-video {
   grid-column: span 2;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1.84 / 1;
   background: #000;
 }
 .gallery .gallery-video video {
