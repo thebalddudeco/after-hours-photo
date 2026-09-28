@@ -110,6 +110,8 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
   padding: 10rem 3.5vw;
   border-bottom: 1px solid var(--line);
 }
+.intro { grid-template-columns: 1fr; }
+.intro > div { width: min(100%, 88rem); margin-inline: auto; }
 .intro h2 { max-width: 79rem; font-size: clamp(3rem, 6.4vw, 6.8rem); }
 .intro div > p { max-width: 47rem; margin: 3rem 0 0; font-size: clamp(1.2rem, 2.1vw, 1.8rem); }
 
