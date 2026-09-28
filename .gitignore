@@ -1,0 +1,6 @@
+work/
+tools/
+*.log
+.DS_Store
+Thumbs.db
+
