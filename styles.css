@@ -147,6 +147,9 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
   object-fit: cover;
   background: var(--paper-deep);
 }
+.gallery-private .sony-still img {
+  aspect-ratio: 4 / 3;
+}
 .gallery .gallery-video {
   grid-column: span 2;
   /* Match the still-image height so the row has one clean baseline. */
