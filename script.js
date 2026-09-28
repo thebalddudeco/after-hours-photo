@@ -11,3 +11,47 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
+const inquiryForm = document.getElementById('inquiry-form');
+const formStatus = document.getElementById('form-status');
+
+inquiryForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const submitButton = inquiryForm.querySelector('button[type="submit"]');
+  const formData = new FormData(inquiryForm);
+
+  if (formData.get('_honey')) return;
+
+  const payload = Object.fromEntries(formData.entries());
+  delete payload._honey;
+  payload._subject = 'New After Hours Photo inquiry';
+  payload._template = 'table';
+
+  submitButton.disabled = true;
+  formStatus.textContent = 'Sending…';
+
+  try {
+    const recipient = ['info', 'thebalddude.co'].join('@');
+    const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json();
+
+    if (!response.ok || result.success === false || result.success === 'false') {
+      throw new Error('Form delivery failed');
+    }
+
+    inquiryForm.reset();
+    formStatus.textContent = 'Thank you. Your inquiry is on its way.';
+  } catch (error) {
+    formStatus.textContent = 'Something went wrong. Please try again in a moment.';
+  } finally {
+    submitButton.disabled = false;
+  }
+});
+
