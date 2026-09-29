@@ -161,7 +161,7 @@ em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(.65rem, .9vw, 1rem);
+  gap: 0;
   align-items: start;
 }
 .gallery figure,
@@ -232,7 +232,7 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
 .motion-heading h2 { font-size: clamp(4rem, 8.5vw, 9rem); }
 .motion-heading > p { max-width: 28rem; margin: 2rem 0 0; color: #c4c0b9; font-size: 1.15rem; }
 .motion-player { margin: 5rem 0 0; }
-.motion-films { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.65rem, .9vw, 1rem); margin-top: 5rem; }
+.motion-films { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 5rem; }
 .motion-films .motion-player { margin: 0; }
 .motion-player video {
   width: 100%;
@@ -437,8 +437,8 @@ footer {
   color: var(--paper);
   background-color: var(--ink);
   background-image: linear-gradient(rgba(25,25,25,.22), rgba(25,25,25,.22)), url('assets/brand/pattern-footer.png');
-  background-repeat: repeat;
-  background-size: 960px auto;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   background-position: center;
 }
 .footer-lockup { display: block; min-width: 0; }
@@ -464,7 +464,7 @@ footer p:last-child { grid-column: 3; text-align: right; }
   .work-heading h2 { font-size: 4.3rem; }
   .work-heading > p { margin: 0; }
   .gallery-subheading { align-items: start; flex-direction: column; gap: .6rem; margin: 4rem 0 1.5rem; }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
   .gallery .gallery-video { aspect-ratio: 1.8 / 1; }
   .statement { margin: 1rem 0; padding: 8rem 1rem; }
   .statement h2 { font-size: 4rem; }
@@ -473,7 +473,7 @@ footer p:last-child { grid-column: 3; text-align: right; }
   .motion-heading h2 { font-size: 4.3rem; }
   .motion-heading > p { margin: 0; }
   .motion-player { margin-top: 3rem; }
-  .motion-films { grid-template-columns: 1fr; gap: .55rem; margin-top: 3rem; }
+  .motion-films { grid-template-columns: 1fr; gap: 0; margin-top: 3rem; }
   .motion-films .motion-player { margin-top: 0; }
   .motion .gallery { margin-top: 3rem; }
   .motion-player video { aspect-ratio: 4 / 5; }
