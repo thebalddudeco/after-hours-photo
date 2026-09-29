@@ -278,7 +278,15 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
   font: inherit;
   outline: none;
 }
-.inquiry-form select { color-scheme: dark; }
+.inquiry-form select {
+  color: #fff;
+  color-scheme: dark;
+  background: #000;
+}
+.inquiry-form select option {
+  color: #fff;
+  background: #000;
+}
 .inquiry-form textarea { min-height: 9rem; resize: vertical; }
 .inquiry-form input:focus,
 .inquiry-form select:focus,
