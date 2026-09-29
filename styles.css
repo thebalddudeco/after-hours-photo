@@ -267,6 +267,24 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
 .services li { display: flex; gap: 2rem; padding: 1.3rem 0; border-bottom: 1px solid var(--line); font-size: 1.1rem; }
 .services li span { color: var(--muted); font-size: .67rem; }
 
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 4rem);
+  align-items: stretch;
+  padding: 9rem 3.5vw;
+  border-bottom: 1px solid var(--line);
+  background: var(--amber);
+}
+.about-heading { grid-column: 1 / -1; }
+.about-profile { display: contents; }
+.about-portrait-wrap { min-height: 34rem; overflow: hidden; background: var(--ink); }
+.about-portrait { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+.about-copy { display: flex; flex-direction: column; justify-content: center; }
+.about-copy .eyebrow { margin-bottom: 1.4rem; }
+.about-copy > p:not(.eyebrow) { max-width: 38rem; margin: 0 0 1.25rem; font-size: clamp(.95rem, 1.1vw, 1.1rem); }
+.about-copy > p:last-child { margin-bottom: 0; }
+
 .contact {
   padding: 9rem 3.5vw;
   color: var(--ink);
@@ -414,11 +432,15 @@ footer {
   align-items: end;
   gap: 2rem;
   padding: 3rem 3.5vw;
-  color: var(--ink);
-  background: var(--amber);
+  color: var(--paper);
+  background-color: var(--ink);
+  background-image: linear-gradient(rgba(25,25,25,.22), rgba(25,25,25,.22)), url('assets/brand/pattern-footer.png');
+  background-repeat: repeat;
+  background-size: 960px auto;
+  background-position: center;
 }
 .footer-lockup { display: block; min-width: 0; }
-.footer-lockup-combined { display: block; width: clamp(9.9rem, 13.2vw, 13.2rem); height: auto; }
+.footer-lockup-combined { display: block; width: clamp(9.9rem, 13.2vw, 13.2rem); height: auto; filter: invert(1); }
 footer p { margin: 0; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
 footer p:last-child { grid-column: 3; text-align: right; }
 
@@ -454,6 +476,11 @@ footer p:last-child { grid-column: 3; text-align: right; }
   .motion .gallery { margin-top: 3rem; }
   .motion-player video { aspect-ratio: 4 / 5; }
   .services h2 { font-size: 4rem; }
+  .about { grid-template-columns: 1fr; gap: 2.5rem; padding: 7rem 1rem; }
+  .about-heading { grid-column: auto; }
+  .about-profile { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-portrait-wrap { min-height: 0; aspect-ratio: 4 / 5; }
+  .about-heading h2 { font-size: 4rem; }
   .contact { padding: 7rem 1rem; }
   .contact > .section-number { margin-bottom: 3rem; }
   .contact-layout { grid-template-columns: 1fr; gap: 4rem; }

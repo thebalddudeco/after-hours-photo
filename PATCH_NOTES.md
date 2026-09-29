@@ -2,6 +2,9 @@
 
 ## Current patch — 2026-09-29
 
+- Added the About section in the order portrait → bio → portrait → bio across the desktop layout, with a stacked responsive layout on smaller screens.
+- Added Justin and Steven portrait assets with a shared high-contrast monochrome treatment.
+- Applied the supplied repeat pattern to the footer mockup and switched the footer lockup to the cream-on-black treatment.
 - Removed `brand-identity.html` from the public site.
 - Removed the Brand link from the main navigation.
 - Updated favicon, Apple touch/web clip, Open Graph, and Twitter/X image references to the existing After Hours logo assets.

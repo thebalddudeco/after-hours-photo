@@ -4,6 +4,8 @@
 
 ### Website and brand system
 
+- Added a horizontal About section with Justin von Braun and Steven Rodrigues profiles, matching black-and-white portrait treatments, and After Hours-specific biographies.
+- Added the approved repeat pattern to the footer and updated the footer lockup for contrast against the patterned black field.
 - Removed the standalone Brand section and deleted the separate brand identity page.
 - Kept the portfolio’s commercial brand-event work in place.
 - Applied the After Hours logo system across the header, footer, favicon, web clip icon, and social preview metadata.
