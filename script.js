@@ -21,6 +21,22 @@ const videoObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('video').forEach((video) => videoObserver.observe(video));
 
+let videoScrollCheck = 0;
+const pauseVideosOutsideViewport = () => {
+  cancelAnimationFrame(videoScrollCheck);
+  videoScrollCheck = requestAnimationFrame(() => {
+    document.querySelectorAll('video').forEach((video) => {
+      const bounds = video.getBoundingClientRect();
+      if (bounds.bottom <= 0 || bounds.top >= window.innerHeight) {
+        video.pause();
+      }
+    });
+  });
+};
+
+window.addEventListener('scroll', pauseVideosOutsideViewport, { passive: true });
+window.addEventListener('resize', pauseVideosOutsideViewport);
+
 const inquiryForm = document.getElementById('inquiry-form');
 const formStatus = document.getElementById('form-status');
 
