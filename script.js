@@ -11,6 +11,16 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
+const videoObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      entry.target.pause();
+    }
+  });
+}, { threshold: 0.01 });
+
+document.querySelectorAll('video').forEach((video) => videoObserver.observe(video));
+
 const inquiryForm = document.getElementById('inquiry-form');
 const formStatus = document.getElementById('form-status');
 
