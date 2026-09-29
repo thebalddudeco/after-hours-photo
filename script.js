@@ -95,3 +95,12 @@ if (new URLSearchParams(window.location.search).get('sent') === '1' && formStatu
   formStatus.textContent = 'Thank you. Your inquiry is on its way.';
 }
 
+inquiryForm?.addEventListener('submit', () => {
+  const submitButton = inquiryForm.querySelector('button[type="submit"]');
+  if (!submitButton) return;
+  submitButton.disabled = true;
+  submitButton.setAttribute('aria-busy', 'true');
+  submitButton.firstChild.textContent = 'Sending... ';
+  if (formStatus) formStatus.textContent = 'Sending...';
+});
+
