@@ -280,7 +280,7 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
   gap: clamp(1.5rem, 3vw, 4rem);
   align-items: stretch;
 }
-.about-portrait-wrap { min-height: 34rem; overflow: hidden; background: var(--ink); }
+.about-portrait-wrap { min-height: 34rem; overflow: hidden; border-radius: 8px; background: var(--ink); }
 .about-portrait { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
 .about-copy { display: flex; flex-direction: column; justify-content: center; }
 .about-copy .eyebrow { margin-bottom: 1.4rem; }
