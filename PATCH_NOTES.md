@@ -2,7 +2,7 @@
 
 ## Current patch — 2026-09-29
 
-- Removed unintended gutters between gallery and motion-film tiles so image-led grids sit edge-to-edge.
+- Standardized gallery and motion-film gutters so every row and column boundary uses the same spacing.
 - Added the About section in the order portrait → bio → portrait → bio across the desktop layout, with a stacked responsive layout on smaller screens.
 - Added Justin and Steven portrait assets with a shared high-contrast monochrome treatment.
 - Applied the supplied repeat pattern to the footer mockup and switched the footer lockup to the cream-on-black treatment.
