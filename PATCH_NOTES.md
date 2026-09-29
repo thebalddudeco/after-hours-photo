@@ -2,6 +2,7 @@
 
 ## Current patch — 2026-09-29
 
+- Replaced the six Arabica Coffee Fest gallery images with the strongest updated edits from the supplied selection folder: DSCF0046, DSCF0150, DSCF0366, DSCF0596, DSCF0613, and DSCF0840.
 - Standardized gallery and motion-film gutters so every row and column boundary uses the same spacing.
 - Added the About section in the order portrait → bio → portrait → bio across the desktop layout, with a stacked responsive layout on smaller screens.
 - Added Justin and Steven portrait assets with a shared high-contrast monochrome treatment.
