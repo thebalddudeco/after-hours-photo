@@ -106,6 +106,8 @@ inquiryForm?.addEventListener('submit', async (event) => {
 
   submitButton.disabled = true;
   formStatus.textContent = 'Sending…';
+  const requestController = new AbortController();
+  const requestTimeout = window.setTimeout(() => requestController.abort(), 15000);
 
   try {
     const recipient = ['info', 'thebalddude.co'].join('@');
@@ -115,6 +117,7 @@ inquiryForm?.addEventListener('submit', async (event) => {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
+      signal: requestController.signal,
       body: JSON.stringify(payload)
     });
     const result = await response.json();
@@ -126,8 +129,11 @@ inquiryForm?.addEventListener('submit', async (event) => {
     inquiryForm.reset();
     formStatus.textContent = 'Thank you. Your inquiry is on its way.';
   } catch (error) {
-    formStatus.textContent = 'Something went wrong. Please try again in a moment.';
+    formStatus.textContent = error.name === 'AbortError'
+      ? 'The request timed out. Please try again or email info@thebalddude.co directly.'
+      : 'Something went wrong. Please try again in a moment.';
   } finally {
+    window.clearTimeout(requestTimeout);
     submitButton.disabled = false;
   }
 });
