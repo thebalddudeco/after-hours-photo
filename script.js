@@ -91,16 +91,43 @@ document.addEventListener('click', (event) => {
 const inquiryForm = document.getElementById('inquiry-form');
 const formStatus = document.getElementById('form-status');
 
-if (new URLSearchParams(window.location.search).get('sent') === '1' && formStatus) {
-  formStatus.textContent = 'Thank you. Your inquiry is on its way.';
-}
+inquiryForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
 
-inquiryForm?.addEventListener('submit', () => {
   const submitButton = inquiryForm.querySelector('button[type="submit"]');
   if (!submitButton) return;
+
+  const formData = new FormData(inquiryForm);
+  if (formData.get('_honey')) return;
+
   submitButton.disabled = true;
   submitButton.setAttribute('aria-busy', 'true');
   submitButton.firstChild.textContent = 'Sending... ';
   if (formStatus) formStatus.textContent = 'Sending...';
+
+  try {
+    const response = await fetch('https://formsubmit.co/ajax/info@thebalddude.co', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      },
+      body: new URLSearchParams(formData).toString()
+    });
+    const result = await response.json();
+
+    if (!response.ok || result.success === false || result.success === 'false') {
+      throw new Error('Form delivery failed');
+    }
+
+    inquiryForm.reset();
+    if (formStatus) formStatus.textContent = 'Thank you. Your inquiry is on its way.';
+  } catch (error) {
+    if (formStatus) formStatus.textContent = 'Something went wrong. Please try again or email info@thebalddude.co directly.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.removeAttribute('aria-busy');
+    submitButton.firstChild.textContent = 'Send inquiry ';
+  }
 });
 
