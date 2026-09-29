@@ -3,21 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#191919">
   <meta name="description" content="After Hours Photo creates chic editorial photography for commercial events, private celebrations, launches and galas.">
   <meta property="og:title" content="After Hours Photo — Editorial Event Photography">
   <meta property="og:description" content="Commercial polish. Private energy. Event photography with an editorial point of view.">
-  <meta property="og:image" content="https://www.afterhoursphoto.com/assets/images/hero-taylor-rooftop.jpg">
+  <meta property="og:image" content="https://www.afterhoursphoto.com/assets/brand/seo/after-hours-logo-black-1444.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.afterhoursphoto.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="After Hours Photo — Editorial Event Photography">
+  <meta name="twitter:description" content="Commercial polish. Private energy. Event photography with an editorial point of view.">
+  <meta name="twitter:image" content="https://www.afterhoursphoto.com/assets/brand/seo/after-hours-logo-black-1444.png">
   <title>After Hours Photo — Editorial Event Photography</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="56x41" href="assets/brand/seo/after-hours-logo-black-56.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x131" href="assets/brand/seo/after-hours-logo-black-180.png">
+  <link rel="mask-icon" href="favicon.svg" color="#191919">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
   <link rel="preload" href="assets/images/hero-peak-design.jpg" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header" aria-label="Main navigation">
-    <a class="wordmark" href="#top" aria-label="After Hours Photo home">After Hours <span>Photo</span></a>
+    <a class="wordmark" href="#top" aria-label="After Hours Photo home"><img src="assets/brand/after-hours-logo-light.svg" data-light-src="assets/brand/after-hours-logo-dark.svg" data-dark-src="assets/brand/after-hours-logo-light.svg" alt="After Hours Photo"></a>
     <nav>
       <a href="#work">Work</a>
       <a href="#approach">Approach</a>
@@ -35,7 +44,7 @@
         <h1 id="hero-title"><span>Every occasion,</span><em>beautifully observed.</em></h1>
         <p class="hero-note">Chic editorial photography for commercial events and private celebrations.</p>
       </div>
-      <a class="scroll-cue" href="#work">Selected work <span aria-hidden="true">↓</span></a>
+      <a class="scroll-cue" href="#work">Selected work <span class="material-symbols-rounded ui-icon" aria-hidden="true">south</span></a>
     </section>
 
     <section class="intro reveal" id="approach">
@@ -248,7 +257,7 @@
             <span>Event type</span>
             <div class="custom-select" data-select>
               <input type="hidden" name="event_type" required>
-              <button class="custom-select-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">Select one <span aria-hidden="true">⌄</span></button>
+              <button class="custom-select-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">Select one <span class="material-symbols-rounded ui-icon" aria-hidden="true">expand_more</span></button>
               <ul class="custom-select-menu" role="listbox" tabindex="-1">
                 <li role="option" data-value="Commercial event or launch">Commercial event or launch</li>
                 <li role="option" data-value="Private party or dinner">Private party or dinner</li>
@@ -276,7 +285,7 @@
             <input type="text" name="_honey" tabindex="-1" autocomplete="off">
           </label>
           <div class="form-actions form-wide">
-            <button type="submit">Send inquiry <span aria-hidden="true">↗</span></button>
+            <button type="submit">Send inquiry <span class="material-symbols-rounded ui-icon" aria-hidden="true">north_east</span></button>
             <p class="form-status" id="form-status" aria-live="polite"></p>
           </div>
         </form>
@@ -285,11 +294,10 @@
   </main>
 
   <footer>
-    <a class="wordmark" href="#top">After Hours <span>Photo</span></a>
-    <p>Editorial event photography / New York</p>
+    <a class="footer-lockup" href="#top" aria-label="After Hours Photo and The Bald Dude Co."><img class="footer-lockup-combined" src="assets/brand/after-hours-x-bald-dude-lockup.png" alt="After Hours Photo × The Bald Dude Co."></a>
     <p>© <span id="year"></span> After Hours Photo</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=nav-scroll1"></script>
 </body>
 </html>
 

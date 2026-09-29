@@ -1,5 +1,25 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const siteHeader = document.querySelector('.site-header');
+const headerLogo = siteHeader?.querySelector('.wordmark img');
+const darkHeaderSections = new Set(['hero', 'osf', 'private', 'motion', 'statement']);
+
+const updateHeaderContrast = () => {
+  if (!siteHeader) return;
+  const isScrolled = window.scrollY > 8;
+  const probeY = Math.min(siteHeader.offsetHeight + 2, window.innerHeight - 1);
+  const section = document.elementFromPoint(window.innerWidth / 2, probeY)?.closest('section');
+  const isDark = Boolean(section && [...section.classList].some((name) => darkHeaderSections.has(name)));
+  siteHeader.classList.toggle('is-scrolled', isScrolled);
+  siteHeader.classList.toggle('is-dark-bg', isDark);
+  siteHeader.classList.toggle('is-light-bg', !isDark);
+  if (headerLogo) headerLogo.src = (isDark || isScrolled) ? headerLogo.dataset.darkSrc : headerLogo.dataset.lightSrc;
+};
+
+updateHeaderContrast();
+window.addEventListener('scroll', updateHeaderContrast, { passive: true });
+window.addEventListener('resize', updateHeaderContrast);
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {

@@ -1,8 +1,9 @@
 :root {
-  --ink: #0a0a0a;
-  --paper: #f0ece4;
-  --line: rgba(10,10,10,.2);
-  --signal: #e85832;
+  --ink: #191919;
+  --paper: #f1e8dd;
+  --line: rgba(25,25,25,.2);
+  --signal: #f0392e;
+  --amber: #ffb300;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -10,6 +11,7 @@ body { margin: 0; color: var(--ink); background: var(--paper); font-family: Aria
 a { color: inherit; }
 .brand-header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3.5vw; border-bottom: 1px solid var(--line); font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 .brand-wordmark { font-size: 1rem; letter-spacing: -.035em; text-decoration: none; }
+.brand-wordmark img { display: block; width: clamp(5.9rem, 9.1vw, 8.4rem); height: auto; }
 .brand-wordmark em { font-family: Georgia, serif; font-size: 1.05em; font-weight: 400; letter-spacing: 0; text-transform: none; }
 main { padding: 0 3.5vw; }
 .brand-hero { min-height: 76vh; display: grid; align-content: center; padding: 8rem 0; }
@@ -62,7 +64,7 @@ h1 em, .type-serif { font-family: Georgia, serif; font-weight: 400; letter-spaci
 .reference-grid figure { margin: 0; background: #000; }
 .reference-grid img { display: block; width: 100%; height: 14rem; object-fit: contain; }
 .reference-grid figcaption { padding: .75rem; color: #fff; font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-.brand-footer { display: flex; justify-content: space-between; padding: 2rem 3.5vw; color: #fff; background: var(--ink); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.brand-footer { display: flex; justify-content: space-between; padding: 2rem 3.5vw; color: var(--ink); background: var(--amber); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .brand-footer a { text-decoration: none; }
 @media (max-width: 760px) {
   .brand-header { align-items: flex-start; gap: 1rem; flex-direction: column; }
@@ -73,4 +75,13 @@ h1 em, .type-serif { font-family: Georgia, serif; font-weight: 400; letter-spaci
   .type-section, .palette-section, .reference-section { padding: 5rem 0; }
   .reference-grid img { height: 12rem; }
   .brand-footer { align-items: flex-start; gap: 1rem; flex-direction: column; }
+}
+ .ui-icon {
+  display: inline-block;
+  font-family: 'Material Symbols Rounded';
+  font-size: 1.15em;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: -.16em;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
 }
