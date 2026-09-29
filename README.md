@@ -16,3 +16,9 @@ Then open `http://localhost:4173`.
 
 The site is configured for GitHub Pages. The intended custom domain is `www.afterhoursphoto.com`, but its DNS currently points to Squarespace. Add the `CNAME` file only after the DNS is switched so the GitHub Pages preview remains available in the meantime.
 
+## Project notes
+
+- [Release notes](RELEASE_NOTES.md)
+- [Patch notes](PATCH_NOTES.md)
+- [Brand application notes](BRAND_APPLICATION_NOTES.md)
+
