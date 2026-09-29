@@ -91,50 +91,7 @@ document.addEventListener('click', (event) => {
 const inquiryForm = document.getElementById('inquiry-form');
 const formStatus = document.getElementById('form-status');
 
-inquiryForm?.addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const submitButton = inquiryForm.querySelector('button[type="submit"]');
-  const formData = new FormData(inquiryForm);
-
-  if (formData.get('_honey')) return;
-
-  const payload = Object.fromEntries(formData.entries());
-  delete payload._honey;
-  payload._subject = 'New After Hours Photo inquiry';
-  payload._template = 'table';
-
-  submitButton.disabled = true;
-  formStatus.textContent = 'Sending…';
-  const requestController = new AbortController();
-  const requestTimeout = window.setTimeout(() => requestController.abort(), 15000);
-
-  try {
-    const recipient = ['info', 'thebalddude.co'].join('@');
-    const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      signal: requestController.signal,
-      body: JSON.stringify(payload)
-    });
-    const result = await response.json();
-
-    if (!response.ok || result.success === false || result.success === 'false') {
-      throw new Error('Form delivery failed');
-    }
-
-    inquiryForm.reset();
-    formStatus.textContent = 'Thank you. Your inquiry is on its way.';
-  } catch (error) {
-    formStatus.textContent = error.name === 'AbortError'
-      ? 'The request timed out. Please try again or email info@thebalddude.co directly.'
-      : 'Something went wrong. Please try again in a moment.';
-  } finally {
-    window.clearTimeout(requestTimeout);
-    submitButton.disabled = false;
-  }
-});
+if (new URLSearchParams(window.location.search).get('sent') === '1' && formStatus) {
+  formStatus.textContent = 'Thank you. Your inquiry is on its way.';
+}
 
