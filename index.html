@@ -245,15 +245,18 @@
           </label>
           <label>
             <span>Event type</span>
-            <select name="event_type" required>
-              <option value="" selected disabled>Select one</option>
-              <option>Commercial event or launch</option>
-              <option>Private party or dinner</option>
-              <option>Gala or fundraiser</option>
-              <option>Editorial event coverage</option>
-              <option>Photo and short-form motion</option>
-              <option>Something else</option>
-            </select>
+            <div class="custom-select" data-select>
+              <input type="hidden" name="event_type" required>
+              <button class="custom-select-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">Select one <span aria-hidden="true">⌄</span></button>
+              <ul class="custom-select-menu" role="listbox" tabindex="-1">
+                <li role="option" data-value="Commercial event or launch">Commercial event or launch</li>
+                <li role="option" data-value="Private party or dinner">Private party or dinner</li>
+                <li role="option" data-value="Gala or fundraiser">Gala or fundraiser</li>
+                <li role="option" data-value="Editorial event coverage">Editorial event coverage</li>
+                <li role="option" data-value="Photo and short-form motion">Photo and short-form motion</li>
+                <li role="option" data-value="Something else">Something else</li>
+              </ul>
+            </div>
           </label>
           <label>
             <span>Event date</span>

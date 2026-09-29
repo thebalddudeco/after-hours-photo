@@ -37,6 +37,37 @@ const pauseVideosOutsideViewport = () => {
 window.addEventListener('scroll', pauseVideosOutsideViewport, { passive: true });
 window.addEventListener('resize', pauseVideosOutsideViewport);
 
+document.querySelectorAll('[data-select]').forEach((select) => {
+  const toggle = select.querySelector('.custom-select-toggle');
+  const input = select.querySelector('input[type="hidden"]');
+  const menu = select.querySelector('.custom-select-menu');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = select.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  menu.querySelectorAll('[role="option"]').forEach((option) => {
+    option.addEventListener('click', () => {
+      input.value = option.dataset.value;
+      toggle.firstChild.textContent = option.textContent;
+      menu.querySelectorAll('[role="option"]').forEach((item) => item.removeAttribute('aria-selected'));
+      option.setAttribute('aria-selected', 'true');
+      select.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+});
+
+document.addEventListener('click', (event) => {
+  document.querySelectorAll('[data-select].is-open').forEach((select) => {
+    if (!select.contains(event.target)) {
+      select.classList.remove('is-open');
+      select.querySelector('.custom-select-toggle').setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
 const inquiryForm = document.getElementById('inquiry-form');
 const formStatus = document.getElementById('form-status');
 

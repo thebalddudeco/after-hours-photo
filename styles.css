@@ -287,9 +287,46 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
   color: #fff;
   background: #000;
 }
+.custom-select { position: relative; }
+.custom-select-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.65);
+  border-radius: 0;
+  padding: 0 0 .75rem;
+  color: #fff;
+  background: #000;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.custom-select-toggle:focus { outline: none; border-bottom-color: #fff; box-shadow: 0 1px 0 #fff; }
+.custom-select-toggle span { font-size: 1.2em; line-height: 1; }
+.custom-select-menu {
+  position: absolute;
+  z-index: 20;
+  display: none;
+  width: 100%;
+  max-height: 16rem;
+  overflow-y: auto;
+  margin: 0;
+  padding: .35rem 0;
+  border: 1px solid rgba(255,255,255,.35);
+  list-style: none;
+  color: #fff;
+  background: #000;
+}
+.custom-select.is-open .custom-select-menu { display: block; }
+.custom-select-menu li { padding: .7rem .8rem; cursor: pointer; }
+.custom-select-menu li:hover,
+.custom-select-menu li[aria-selected="true"] { background: #262626; }
 .inquiry-form textarea { min-height: 9rem; resize: vertical; }
 .inquiry-form input:focus,
 .inquiry-form select:focus,
+.custom-select-toggle:focus,
 .inquiry-form textarea:focus { border-bottom-color: #fff; box-shadow: 0 1px 0 #fff; }
 .inquiry-form input::placeholder,
 .inquiry-form textarea::placeholder { color: rgba(255,255,255,.7); }
