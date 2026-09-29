@@ -270,7 +270,6 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
 .about {
   display: block;
   padding: 9rem 3.5vw;
-  border-bottom: 1px solid var(--line);
   background: var(--amber);
 }
 .about-heading { margin-bottom: clamp(3rem, 6vw, 6rem); }
