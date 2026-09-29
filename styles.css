@@ -65,9 +65,10 @@ img, video { display: block; width: 100%; height: auto; }
 .wordmark img { display: block; width: clamp(5.9rem, 9.1vw, 8.4rem); height: auto; }
 .site-header .wordmark img { width: clamp(4.13rem, 6.37vw, 5.88rem); }
 .wordmark span { font-family: Georgia, serif; font-style: italic; font-weight: 400; text-transform: none; }
-nav { display: flex; align-items: center; gap: 1.6rem; }
-nav a { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+nav { display: flex; align-items: center; gap: clamp(.65rem, 1.15vw, 1.6rem); }
+nav a { font-size: clamp(.56rem, .65vw, .72rem); font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
 .nav-contact { border: 1px solid currentColor; border-radius: 8px; padding: .62rem .95rem; }
+section[id] { scroll-margin-top: 5rem; }
 
 .hero {
   position: relative;
