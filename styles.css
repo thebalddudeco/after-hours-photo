@@ -316,6 +316,7 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
 .inquiry-form textarea:-webkit-autofill:focus,
 .inquiry-form textarea:autofill {
   background-color: var(--amber) !important;
+  background-image: none !important;
   color: var(--ink) !important;
   -webkit-text-fill-color: var(--ink) !important;
   -webkit-box-shadow: 0 0 0 1000px var(--amber) inset !important;
