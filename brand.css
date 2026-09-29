@@ -23,6 +23,32 @@ h1 em, .type-serif { font-family: Georgia, serif; font-weight: 400; letter-spaci
 .type-sans { margin: 0; font-size: clamp(4rem, 10vw, 10rem); font-weight: 800; line-height: .82; letter-spacing: -.075em; }
 .type-serif { margin: 0; font-size: clamp(3.8rem, 8vw, 8rem); line-height: .84; }
 .type-note { margin: 2rem 0 0; color: #68645e; font-size: .82rem; }
+.logo-section { padding: 8rem 0; border-top: 1px solid var(--line); }
+.logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.logo-card { min-height: 22rem; display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; color: #fff; background: #0a0a0a; }
+.logo-meta { margin: 0; color: var(--signal); font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.logo-lockup { min-height: 11rem; display: flex; flex-direction: column; justify-content: center; }
+.logo-note { margin: 0; color: rgba(255,255,255,.64); font-size: .8rem; }
+.logo-tiger { color: #0f0f0f; background: #fbeede; }
+.logo-tiger .logo-meta { color: #f05b10; }
+.logo-tiger .logo-lockup { line-height: .72; letter-spacing: -.09em; }
+.logo-tiger strong { font-family: Arial Black, Arial, sans-serif; font-size: clamp(4rem, 8vw, 8.5rem); font-weight: 900; }
+.logo-tiger strong:nth-child(2) { margin-left: 1.2rem; }
+.logo-tiger small { margin: 1.3rem 0 0 1.4rem; font-size: .8rem; font-weight: 700; letter-spacing: .35em; }
+.logo-daily { color: #f7f7f7; background: #1a1a1a; }
+.logo-daily .logo-lockup { align-items: flex-start; }
+.logo-daily strong { font-family: Arial, Helvetica, sans-serif; font-size: clamp(2.8rem, 6vw, 6rem); font-weight: 800; letter-spacing: -.095em; line-height: .85; }
+.logo-daily span { margin-top: 1.2rem; font-size: .72rem; letter-spacing: .22em; }
+.logo-editorial { color: #0f0f0f; background: #e6ddce; }
+.logo-editorial .logo-meta { color: #f05b10; }
+.logo-editorial .logo-lockup { line-height: .78; }
+.logo-editorial strong { font-family: Georgia, serif; font-size: clamp(3.5rem, 7vw, 7rem); font-weight: 400; letter-spacing: -.09em; }
+.logo-editorial em { margin-left: 1.5rem; font-family: Georgia, serif; font-size: clamp(2.5rem, 5vw, 5rem); letter-spacing: -.08em; }
+.logo-mark { color: #fbeede; background: #36020b; }
+.logo-mark .logo-meta { color: #f05b10; }
+.logo-mark .logo-lockup { flex-direction: row; align-items: center; gap: 1.5rem; }
+.logo-mark strong { display: grid; width: 7rem; height: 7rem; place-items: center; border: .3rem solid #f05b10; border-radius: 50%; font-size: 3rem; letter-spacing: -.12em; }
+.logo-mark span { max-width: 8rem; font-size: .75rem; font-weight: 700; letter-spacing: .17em; line-height: 1.35; }
 .section-intro { max-width: 40rem; margin: 0 0 3.5rem 25%; font-size: clamp(1.1rem, 1.8vw, 1.5rem); }
 .logo-direction { max-width: 54rem; margin: -1rem 0 3.5rem 25%; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 1rem; }
 .logo-direction strong { color: var(--signal); }
@@ -43,7 +69,7 @@ h1 em, .type-serif { font-family: Georgia, serif; font-weight: 400; letter-spaci
   .brand-hero { min-height: 68vh; padding: 6rem 0; }
   .brand-hero h1 { font-size: clamp(4rem, 18vw, 8rem); }
   .lede, .section-intro, .logo-direction { margin-left: 0; }
-  .type-grid, .palette-grid, .reference-grid { grid-template-columns: 1fr; }
+  .type-grid, .logo-grid, .palette-grid, .reference-grid { grid-template-columns: 1fr; }
   .type-section, .palette-section, .reference-section { padding: 5rem 0; }
   .reference-grid img { height: 12rem; }
   .brand-footer { align-items: flex-start; gap: 1rem; flex-direction: column; }
