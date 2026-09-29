@@ -22,4 +22,5 @@
 - Use the yellow field for the About section, with high-contrast monochrome portraits providing the visual break between copy blocks.
 - Present the About profiles horizontally on desktop in the order portrait, bio, portrait, bio; stack them on smaller screens.
 - Use the repeat pattern in the footer as an image-led brand moment, keeping the footer copy and logo readable against the black field.
+- HARD LAYOUT RULE: Every gallery and motion-media grid must use one identical gutter value horizontally and vertically. Video and still-image tiles must share the same row baseline; never allow a seam beneath a video without the same seam between adjacent photos.
 
