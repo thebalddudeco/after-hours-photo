@@ -307,6 +307,17 @@ figcaption { margin-top: .7rem; font-size: .63rem; font-weight: 700; letter-spac
   font: inherit;
   outline: none;
 }
+.inquiry-form input:-webkit-autofill,
+.inquiry-form input:-webkit-autofill:hover,
+.inquiry-form input:-webkit-autofill:focus,
+.inquiry-form textarea:-webkit-autofill,
+.inquiry-form textarea:-webkit-autofill:hover,
+.inquiry-form textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--ink);
+  -webkit-box-shadow: 0 0 0 1000px var(--amber) inset;
+  box-shadow: 0 0 0 1000px var(--amber) inset;
+  caret-color: var(--ink);
+}
 .inquiry-form select {
   color: var(--paper);
   color-scheme: dark;
