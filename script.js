@@ -98,7 +98,16 @@ inquiryForm?.addEventListener('submit', async (event) => {
   if (!submitButton) return;
 
   const formData = new FormData(inquiryForm);
+  formData.set('Source Site', 'After Hours Photo');
+  formData.set('Inquiry Page', window.location.pathname);
+  const attribution = new URLSearchParams(window.location.search);
+  ['utm_source', 'utm_medium', 'utm_campaign'].forEach((key) => { if (attribution.has(key)) formData.set(key, attribution.get(key).slice(0, 200)); });
   if (formData.get('_honey')) return;
+  if (!formData.get('event_type')) {
+    if (formStatus) formStatus.textContent = 'Please choose an event type before sending your inquiry.';
+    inquiryForm.querySelector('.custom-select-toggle')?.focus();
+    return;
+  }
 
   submitButton.disabled = true;
   submitButton.setAttribute('aria-busy', 'true');
