@@ -1,6 +1,6 @@
 # After Hours Photo
 
-One-page portfolio website for After Hours Photo, an editorial event photography studio covering commercial and private events.
+After Hours Photo is a New York City event photography and videography agency. This site presents event photographs, short-form films, service pages, project stories and an inquiry path for commercial and private events.
 
 ## Local preview
 
@@ -14,7 +14,7 @@ Then open `http://localhost:4173`.
 
 ## Publishing
 
-The site is configured for GitHub Pages. The intended custom domain is `www.afterhoursphoto.com`, but its DNS currently points to Squarespace. Add the `CNAME` file only after the DNS is switched so the GitHub Pages preview remains available in the meantime.
+The site publishes from the `main` branch through GitHub Pages at `www.afterhoursphoto.com`. Keep the existing `CNAME` and verify the Pages deployment and live site separately after pushing changes.
 
 ## Project notes
 
