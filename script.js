@@ -130,6 +130,10 @@ inquiryForm?.addEventListener('submit', async (event) => {
     }
 
     inquiryForm.reset();
+    inquiryForm.querySelectorAll('[data-select]').forEach((select) => {
+      select.querySelector('.custom-select-toggle').firstChild.textContent = 'Select one ';
+      select.querySelectorAll('[role="option"]').forEach((option) => option.removeAttribute('aria-selected'));
+    });
     if (formStatus) formStatus.textContent = 'Thank you. Your inquiry is on its way.';
   } catch (error) {
     if (formStatus) formStatus.textContent = 'Something went wrong. Please try again or email info@thebalddude.co directly.';
