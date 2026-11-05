@@ -33,6 +33,8 @@ def main():
         stem = re.sub(r'[^a-z0-9-]+', '-', source.stem.lower()).strip('-')
         with Image.open(source) as original:
             image = ImageOps.exif_transpose(original).convert('RGB')
+            if image.height > image.width:
+                continue
             full = image.copy()
             full.thumbnail((1920, 1920), Image.Resampling.LANCZOS)
             thumb = image.copy()
@@ -45,7 +47,7 @@ def main():
         manifest.append({'source': str(source), 'image': f'images/{stem}.webp', 'thumbnail': f'images/{stem}-800.webp', 'width': full.width, 'height': full.height})
     page = project / 'index.html'
     text = page.read_text(encoding='utf-8')
-    gallery = f'<section class="project-full-gallery" aria-label="{html.escape(args.label, quote=True)} gallery"><h2>{html.escape(args.heading)}</h2><p>{len(sources)} photographs</p><div class="seo-gallery project-photo-grid">' + ''.join(figures) + '</div></section>'
+    gallery = f'<section class="project-full-gallery" aria-label="{html.escape(args.label, quote=True)} gallery"><h2>{html.escape(args.heading)}</h2><p>{len(manifest)} photographs</p><div class="seo-gallery project-photo-grid">' + ''.join(figures) + '</div></section>'
     if 'class="project-full-gallery"' in text:
         text = re.sub(r'<section class="project-full-gallery".*?</section>', lambda _: gallery, text, count=1, flags=re.S)
     else:

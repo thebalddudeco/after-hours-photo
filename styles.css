@@ -547,4 +547,3 @@ footer p:last-child { grid-column: 3; text-align: right; }
 
 /* Full project galleries: equal gutters and uncropped photographs. */
 .project-photo-grid{align-items:start;gap:clamp(.65rem,.9vw,1rem)}.project-photo-grid img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}.project-photo-grid a{display:block}.project-full-gallery{margin:3rem 0}
-
