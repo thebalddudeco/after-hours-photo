@@ -418,33 +418,5 @@
     "thumbnail": "images/dscf1239-800.webp",
     "width": 1920,
     "height": 1080
-  },
-  {
-    "source": "DSCF9934.png",
-    "image": "images/dscf9934.webp",
-    "thumbnail": "images/dscf9934-800.webp",
-    "width": 1920,
-    "height": 1080
-  },
-  {
-    "source": "DSCF9935.png",
-    "image": "images/dscf9935.webp",
-    "thumbnail": "images/dscf9935-800.webp",
-    "width": 1920,
-    "height": 1072
-  },
-  {
-    "source": "DSCF9980.png",
-    "image": "images/dscf9980.webp",
-    "thumbnail": "images/dscf9980-800.webp",
-    "width": 1920,
-    "height": 1080
-  },
-  {
-    "source": "DSCF9981.png",
-    "image": "images/dscf9981.webp",
-    "thumbnail": "images/dscf9981-800.webp",
-    "width": 1920,
-    "height": 1072
   }
 ]

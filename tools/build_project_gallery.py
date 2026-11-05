@@ -25,6 +25,10 @@ def main():
     sources = sorted(p for p in args.source.iterdir() if p.suffix.lower() in {'.png', '.jpg', '.jpeg', '.tif', '.tiff', '.webp'})
     if args.selection:
         sources = [Path(row['source']) for row in json.loads(args.selection.read_text())]
+    exclusions = project / 'gallery-exclusions.json'
+    if exclusions.exists():
+        excluded = set(json.loads(exclusions.read_text())['files'])
+        sources = [p for p in sources if p.name not in excluded]
     assert sources, args.source
     out = project / 'images'
     out.mkdir(exist_ok=True)
