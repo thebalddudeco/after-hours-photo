@@ -547,3 +547,5 @@ footer p:last-child { grid-column: 3; text-align: right; }
 
 /* Full project galleries: equal gutters and uncropped photographs. */
 .project-photo-grid{align-items:start;gap:clamp(.65rem,.9vw,1rem)}.project-photo-grid img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}.project-photo-grid a{display:block}.project-full-gallery{margin:3rem 0}
+/* Event reels appear above each project photo gallery. */
+.project-event-reel{margin:2rem 0 3rem}.project-event-reel h3{font-size:1.4rem;margin-bottom:1rem}.project-reel-player{position:relative;aspect-ratio:16/9;background:var(--ink)}.project-reel-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.project-event-reel--short .project-reel-player{aspect-ratio:9/16;max-width:420px;margin-inline:auto}.project-event-reel p{font-size:.9rem}
