@@ -145,5 +145,5 @@ form?.addEventListener('submit', async event => {
 });
 document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 // Earlier shared homepage links point to the relevant page in the new structure.
-const oldSections = { '#films':'/services/event-films/', '#event-videos':'/services/event-films/', '#about':'/about/', '#coverage':'/agency/', '#intro-title':'/agency/', '#contact':'/contact/' };
+const oldSections = { '#films':'/services/event-films/', '#event-videos':'/services/event-films/', '#about':'/agency/', '#coverage':'/agency/', '#intro-title':'/agency/', '#contact':'/contact/' };
 if (location.pathname === '/' && oldSections[location.hash]) location.replace(oldSections[location.hash]);
