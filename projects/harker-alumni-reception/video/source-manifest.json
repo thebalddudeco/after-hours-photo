@@ -1,0 +1,61 @@
+{
+  "sources": [
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190123_c9f97133-6e5f-4718-aea0-15c1fa7131a0.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 3.041667
+    },
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190144_40e385c7-5596-4cf7-a738-2662b513b2b4.mp4",
+      "width": 1928,
+      "height": 1072,
+      "duration": 3.041667
+    },
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190151_1c920532-2105-4a86-a7ef-b73e98f43998.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 3.041667
+    },
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190350_6e85f9ad-e91a-42e7-91c4-33672724c6cb.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 3.041667
+    },
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190524_834c877c-794a-4048-854b-53d7dce585c5.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 3.041667
+    },
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190625_4a9070f0-7763-43d7-b8a9-cfb3594aba63.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 3.041667
+    },
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190743_e3269b89-5177-4c3c-9e3e-bf9a14eace9c.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 3.041667
+    },
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190805_31646973-8fa6-491a-b588-aa5017470c00.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 3.041667
+    },
+    {
+      "path": "O:\\EVENTS (DEPRECATED)\\HARKER SCHOOL\\VIDEO\\hf_20261111_190818_4b8e056a-e375-4f15-ada0-d3a3d7381d06.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 3.041667
+    }
+  ],
+  "output": "harker-reception-motion.mp4",
+  "duration": 27,
+  "audio": false
+}
