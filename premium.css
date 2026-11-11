@@ -29,3 +29,6 @@ h1,h2,h3,h4,h5,h6,.opening h1,.story-grid h2,.seo-page>h1,.seo-copy h2,.project-
 /* Six projects share two even rows, retaining the same gutter in both directions. */
 .video-grid--six .work-tile:nth-last-child(-n+2){grid-column:span 2;aspect-ratio:3/2}
 @media(max-width:700px){.video-grid--six .work-tile:nth-last-child(-n+2){grid-column:auto}}
+
+/* A text cue replaces the opening arrow. */
+.scroll-to-work{width:auto;height:auto;padding:10px 0;font:400 12px/1.4 var(--sans);letter-spacing:.01em;border-bottom:1px solid currentColor}
