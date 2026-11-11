@@ -1,18 +1,5 @@
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const hero = document.querySelector('[data-hero-video]');
-const heroButton = document.querySelector('[data-hero-toggle]');
-const syncHero = () => {
-  if (!heroButton || !hero) return;
-  heroButton.textContent = hero.paused ? 'Play' : 'Pause';
-  heroButton.setAttribute('aria-label', hero.paused ? 'Play background video' : 'Pause background video');
-};
-if (hero) {
-  hero.addEventListener('play', syncHero);
-  hero.addEventListener('pause', syncHero);
-  heroButton?.addEventListener('click', () => hero.paused ? hero.play().catch(syncHero) : hero.pause());
-  syncHero();
-}
-
 // The opening is a one-way entrance, not a section in the scrollable document.
 const opening = document.querySelector('.studio-home .opening');
 const work = document.querySelector('.studio-home .home-work');
@@ -81,38 +68,31 @@ if (opening && work) {
   });
   if (location.hash === '#work') enterWork(false);
 }
-const previews = [...document.querySelectorAll('[data-preview]')];
-let previewsPaused = false;
-const visiblePreviews = new Set();
-const syncPreviews = () => previews.forEach(video => {
-  if (previewsPaused || document.hidden || !visiblePreviews.has(video)) video.pause();
+// Local videos are silent, automatic loops; YouTube players keep their own controls.
+const automaticVideos = [...document.querySelectorAll('video')];
+const visibleVideos = new Set();
+const syncAutomaticVideos = () => automaticVideos.forEach(video => {
+  if (!video.isConnected || document.hidden || !visibleVideos.has(video) || video.closest('[inert]')) video.pause();
   else video.play().catch(() => {});
 });
-const observer = new IntersectionObserver(entries => {
+const videoObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) visiblePreviews.add(entry.target);
-    else visiblePreviews.delete(entry.target);
+    if (entry.isIntersecting) visibleVideos.add(entry.target);
+    else visibleVideos.delete(entry.target);
   });
-  syncPreviews();
+  syncAutomaticVideos();
 }, { threshold: 0.12 });
-previews.forEach(video => {
+automaticVideos.forEach(video => {
+  video.controls = false;
+  video.autoplay = true;
+  video.loop = true;
   video.muted = true;
   video.defaultMuted = true;
   video.playsInline = true;
-  observer.observe(video);
+  videoObserver.observe(video);
 });
-const previewButton = document.querySelector('[data-preview-toggle]');
-const syncPreviewButton = () => {
-  if (!previewButton) return;
-  previewButton.textContent = previewsPaused ? 'Play previews' : 'Pause previews';
-  previewButton.setAttribute('aria-pressed', String(previewsPaused));
-};
-previewButton?.addEventListener('click', () => { previewsPaused = !previewsPaused; syncPreviews(); syncPreviewButton(); });
-syncPreviewButton();
-document.addEventListener('visibilitychange', () => {
-  syncPreviews();
-  if (document.hidden && hero) hero.pause();
-});
+document.addEventListener('visibilitychange', syncAutomaticVideos);
+window.addEventListener('pageshow', syncAutomaticVideos);
 const expand = document.querySelector('.footer-expand');
 const details = document.querySelector('#footer-details');
 expand?.addEventListener('click', () => {
