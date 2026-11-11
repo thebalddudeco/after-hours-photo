@@ -25,3 +25,7 @@ h1,h2,h3,h4,h5,h6,.opening h1,.story-grid h2,.seo-page>h1,.seo-copy h2,.project-
 .contact-addresses a,.inquiry-form input,.inquiry-form textarea,.inquiry-form button{font-family:var(--sans)}
 @media(max-width:700px){.opening h1{font-size:42px;line-height:1.08}.story-grid h2{font-size:32px}.tile-caption p{font-size:15px}.footer-bottom-bar>p{font-size:24px}.inquiry-section>h2{font-size:36px}.large-contact-link{font-size:30px}}
 @media(max-width:370px){.opening h1{font-size:37px}.footer-bottom-bar>p{font-size:22px}}
+
+/* Six projects share two even rows, retaining the same gutter in both directions. */
+.video-grid--six .work-tile:nth-last-child(-n+2){grid-column:span 2;aspect-ratio:3/2}
+@media(max-width:700px){.video-grid--six .work-tile:nth-last-child(-n+2){grid-column:auto}}
