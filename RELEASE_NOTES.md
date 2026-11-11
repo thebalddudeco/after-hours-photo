@@ -26,3 +26,10 @@
 - Matched dropdown and button corner radii and aligned the event-type underline with neighboring fields.
 - Added the scroll-state navigation treatment with a 90% black bar and cream logo/menu contrast.
 
+
+
+## 2026-11-11 — Watson-inspired dark structure
+
+Rebuilt the homepage as a full-screen, 36-second compilation of six 16:9 event videos followed directly by a five-project video grid. Added Agency; rebuilt About as an editorial card grid with both founder portraits, and Contact with image, contact columns, and the existing FormSubmit inquiry route. Shared dark shell and divided footer across all 15 public pages. Original project photographs and YouTube reels preserved. Harker preview uses its existing photo montage.
+
+Validation: video dimensions/duration and full decoding; local route/asset references; desktop/mobile layouts, video playback and footer expansion; no hard line breaks. Form inbox delivery not tested; direct email and scheduling links remain available. Rollback branch: `codex/before-watson-redesign-20261111`.
