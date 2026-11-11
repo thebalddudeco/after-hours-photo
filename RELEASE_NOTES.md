@@ -1,5 +1,16 @@
 # After Hours Photo — Release Notes
 
+## 2026-11-11
+
+### Agency structure and site navigation
+
+- Restructured the homepage around a large event film, agency introduction, approach, services, selected work, and contact.
+- Added shared menu navigation, About and Contact pages, image-led service navigation, and project filters.
+- Retained the approved wordmark, existing font family, all gallery photographs and reel embeds, and the shared gallery gutter.
+- Kept Peak Design, Orphan Starfish Foundation, and Sigma together in the first desktop project row.
+- Checked mobile and desktop layouts, navigation, filters, and local asset links.
+- Previous version retained on branch `codex/before-working-assembly-restructure-20261111`.
+
 ## 2026-09-29
 
 ### Website and brand system
