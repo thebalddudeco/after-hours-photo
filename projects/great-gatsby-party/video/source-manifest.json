@@ -1,0 +1,86 @@
+{
+  "sources": [
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191553_937c8fa1-4ca9-4a59-b8d2-07286d262559.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191559_4cd46b73-e6d9-45e6-819f-b65ee15d6e2e.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191603_da66dfe3-fb9e-4ce3-8cf5-0237bc94fbb7.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191611_7e44b68b-e1b9-4bfb-98a6-932b95735162.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191617_4c5c2c5f-8e34-4286-b9d7-d22ccfe510e0.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191801_a3921f47-6d51-447d-9f7c-2e0310c97892.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191820_60126bbb-cfa0-4336-b16c-b93465f7aff2.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191825_fbe6b463-784f-4a5b-90e3-b3db6b43ca55.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191934_2b045360-f181-41cd-b9d2-79a076e8334a.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191940_c76189c2-2765-4bb9-b4ab-3cc229ce6e38.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    },
+    {
+      "path": "F:\\EVENTS\\THE GREAT GATSBY PARTY\\VIDEO\\EDITED\\hf_20261111_191944_078b3a2d-e77c-4e10-b163-6f2e59856985.mp4",
+      "width": 1280,
+      "height": 720,
+      "duration": 3.041667
+    }
+  ],
+  "clip_order": [
+    4,
+    3,
+    6,
+    1,
+    2,
+    8,
+    9,
+    7,
+    10,
+    5,
+    11
+  ],
+  "output": "gatsby-party-motion.mp4",
+  "duration": 33,
+  "audio": false
+}
