@@ -7,14 +7,82 @@ const syncHero = () => {
   heroButton.setAttribute('aria-label', hero.paused ? 'Play background video' : 'Pause background video');
 };
 if (hero) {
-  if (reducedMotion.matches) hero.pause();
   hero.addEventListener('play', syncHero);
   hero.addEventListener('pause', syncHero);
   heroButton?.addEventListener('click', () => hero.paused ? hero.play().catch(syncHero) : hero.pause());
   syncHero();
 }
+
+// The opening is a one-way entrance, not a section in the scrollable document.
+const opening = document.querySelector('.studio-home .opening');
+const work = document.querySelector('.studio-home .home-work');
+if (opening && work) {
+  const footer = document.querySelector('.studio-footer');
+  let entered = false;
+  let touchStart = null;
+  work.inert = true;
+  if (footer) footer.inert = true;
+  const enterWork = (animate = true) => {
+    if (entered) return;
+    entered = true;
+    const focusInOpening = opening.contains(document.activeElement);
+    document.body.classList.add('intro-complete');
+    work.inert = false;
+    if (footer) footer.inert = false;
+    hero?.pause();
+    opening.inert = true;
+    opening.setAttribute('aria-hidden', 'true');
+    window.removeEventListener('wheel', onWheel);
+    window.removeEventListener('touchstart', onTouchStart);
+    window.removeEventListener('touchmove', onTouchMove);
+    window.removeEventListener('keydown', onKeyDown);
+    window.removeEventListener('scroll', onScroll);
+    opening.classList.add('opening--dismissed');
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (focusInOpening) {
+      work.setAttribute('tabindex', '-1');
+      work.focus({ preventScroll: true });
+    }
+    const removeOpening = () => {
+      opening.remove();
+      hero?.removeAttribute('src');
+      hero?.querySelectorAll('source').forEach(source => source.removeAttribute('src'));
+      hero?.load();
+    };
+    if (!animate || reducedMotion.matches) removeOpening();
+    else window.setTimeout(removeOpening, 650);
+  };
+  function onWheel(event) {
+    if (event.deltaY <= 0 || event.ctrlKey) return;
+    event.preventDefault();
+    enterWork();
+  }
+  function onTouchStart(event) { touchStart = event.touches[0]?.clientY ?? null; }
+  function onTouchMove(event) {
+    if (touchStart === null || touchStart - (event.touches[0]?.clientY ?? touchStart) < 24) return;
+    event.preventDefault();
+    enterWork();
+  }
+  function onKeyDown(event) {
+    if (event.target.closest('button,a,input,textarea,select')) return;
+    if (!['ArrowDown', 'PageDown', ' ', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    enterWork();
+  }
+  function onScroll() { if (window.scrollY > 0) enterWork(); }
+  window.addEventListener('wheel', onWheel, { passive: false });
+  window.addEventListener('touchstart', onTouchStart, { passive: true });
+  window.addEventListener('touchmove', onTouchMove, { passive: false });
+  window.addEventListener('keydown', onKeyDown);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  document.querySelector('.scroll-to-work')?.addEventListener('click', event => {
+    event.preventDefault();
+    enterWork();
+  });
+  if (location.hash === '#work') enterWork(false);
+}
 const previews = [...document.querySelectorAll('[data-preview]')];
-let previewsPaused = reducedMotion.matches;
+let previewsPaused = false;
 const visiblePreviews = new Set();
 const syncPreviews = () => previews.forEach(video => {
   if (previewsPaused || document.hidden || !visiblePreviews.has(video)) video.pause();

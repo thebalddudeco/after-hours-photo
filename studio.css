@@ -15,3 +15,14 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
 .agency-film-grid video{aspect-ratio:16/9;object-fit:contain;background:#000}.agency-film-grid figcaption{font:400 16px/1.3 var(--serif);padding-top:10px}.footer-social>a{display:flex;align-items:center;justify-content:center;min-width:28px;min-height:32px}
+
+/* Watson-style entrance: dismissed once, then absent from the document. */
+.studio-home:not(.intro-complete){overflow:hidden}
+.studio-home .studio-header{position:fixed;z-index:30;transition:background .4s}
+.studio-home.intro-complete .studio-header{background:var(--bg)}
+.studio-home .opening{position:fixed;inset:0;z-index:20;height:100svh;min-height:0;transition:transform .6s cubic-bezier(.76,0,.24,1)}
+.studio-home .opening--dismissed{transform:translateY(-100%);pointer-events:none}
+.studio-home .home-work{padding-top:128px;opacity:1;transition:opacity .45s}
+.studio-home:not(.intro-complete) .home-work,.studio-home:not(.intro-complete) .studio-footer{visibility:hidden;opacity:0}
+.studio-home .hero-play-toggle:not(:focus-visible){opacity:0}
+@media(max-width:700px){.studio-home .home-work{padding-top:104px}}
