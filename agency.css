@@ -37,3 +37,5 @@ a{color:inherit}img,video{display:block;max-width:100%;height:auto}button{font:i
 .intro h1,.section-heading h2,.work-title,.about-band h2,.film-feature-copy h2{white-space:normal;word-break:normal;overflow-wrap:normal;text-wrap:wrap}
 .section-heading h2{flex:1;min-width:0}.section-heading .pill{flex-shrink:0}
 @media(max-width:1000px){.intro-bottom{grid-template-columns:1fr;gap:28px}.intro-bottom .pill{justify-self:start}}
+
+.home-founder-portraits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--grid-gap);max-width:640px;margin-top:36px}.home-founder-portraits figure{margin:0;min-width:0}.home-founder-portraits img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;object-position:center bottom;background:#000}.home-founder-portraits figcaption{font-size:18px;font-weight:600;line-height:1.3;margin-top:14px}.home-founder-portraits figcaption span{display:block;font-size:13px;font-weight:400;margin-top:4px}@media(max-width:700px){.home-founder-portraits{margin-top:28px}.home-founder-portraits figcaption{font-size:16px}}
