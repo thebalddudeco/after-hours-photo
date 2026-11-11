@@ -95,7 +95,12 @@ const observer = new IntersectionObserver(entries => {
   });
   syncPreviews();
 }, { threshold: 0.12 });
-previews.forEach(video => observer.observe(video));
+previews.forEach(video => {
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  observer.observe(video);
+});
 const previewButton = document.querySelector('[data-preview-toggle]');
 const syncPreviewButton = () => {
   if (!previewButton) return;
