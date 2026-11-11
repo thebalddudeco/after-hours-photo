@@ -50,3 +50,14 @@ if (heroVideo && heroToggle) {
   syncToggle();
 }
 document.querySelectorAll('[data-year]').forEach(node => node.textContent = new Date().getFullYear());
+
+// Keep earlier shared section links working with the current section name.
+const normalizeVideoAnchor = () => {
+  if (location.hash !== '#films') return;
+  const section = document.getElementById('event-videos');
+  if (!section) return;
+  history.replaceState(null, '', location.pathname + location.search + '#event-videos');
+  section.scrollIntoView();
+};
+normalizeVideoAnchor();
+window.addEventListener('hashchange', normalizeVideoAnchor);
