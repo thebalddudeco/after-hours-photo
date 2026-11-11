@@ -127,3 +127,13 @@ document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date
 // Earlier shared homepage links point to the relevant page in the new structure.
 const oldSections = { '#films':'/services/event-films/', '#event-videos':'/services/event-films/', '#about':'/agency/', '#coverage':'/agency/', '#intro-title':'/agency/', '#contact':'/contact/' };
 if (location.pathname === '/' && oldSections[location.hash]) location.replace(oldSections[location.hash]);
+
+// Keep project navigation legible once the opening media has scrolled away.
+const caseOpening = document.querySelector('.case-opening');
+const caseHeader = caseOpening ? document.querySelector('.studio-header') : null;
+if (caseHeader) {
+  const syncCaseHeader = () => caseHeader.classList.toggle('case-nav-solid', caseOpening.getBoundingClientRect().bottom <= caseHeader.offsetHeight);
+  window.addEventListener('scroll', syncCaseHeader, { passive: true });
+  window.addEventListener('resize', syncCaseHeader);
+  syncCaseHeader();
+}
