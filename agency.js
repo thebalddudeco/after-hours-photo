@@ -37,8 +37,8 @@ const heroVideo = document.querySelector('[data-hero-video]');
 const heroToggle = document.querySelector('[data-hero-toggle]');
 if (heroVideo && heroToggle) {
   const syncToggle = () => {
-    heroToggle.textContent = heroVideo.paused ? 'Play film' : 'Pause film';
-    heroToggle.setAttribute('aria-label', heroVideo.paused ? 'Play background film' : 'Pause background film');
+    heroToggle.textContent = heroVideo.paused ? 'Play video' : 'Pause video';
+    heroToggle.setAttribute('aria-label', heroVideo.paused ? 'Play background video' : 'Pause background video');
   };
   heroToggle.addEventListener('click', () => {
     if (heroVideo.paused) heroVideo.play().catch(() => {});

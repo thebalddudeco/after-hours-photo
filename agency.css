@@ -30,3 +30,8 @@ a{color:inherit}img,video{display:block;max-width:100%;height:auto}button{font:i
 
 .service-collection .seo-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.service-collection .seo-card{padding-top:0;border-top:0}.service-collection .seo-card>img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;margin-bottom:24px}.service-collection .seo-card h2{font-size:clamp(26px,2.8vw,44px)}@media(max-width:700px){.service-collection .seo-card-grid{grid-template-columns:1fr;gap:32px}}
 .agency-interior .agency-film-grid{gap:var(--grid-gap)}
+
+/* Headings wrap naturally; no editorial hard line breaks. */
+.work-title{font-size:clamp(52px,7.5vw,120px);line-height:1.02;max-width:1450px}.about-band h2{font-size:clamp(42px,4.8vw,80px);line-height:1.05}.film-feature-copy h2{font-size:clamp(44px,5.2vw,88px);line-height:1.04}
+@media(max-width:700px){.work-title{font-size:52px}.about-band h2{font-size:46px}.film-feature-copy h2{font-size:50px}}
+.intro h1,.work-title{max-width:none}
